@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Quadratic {
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
-        int a ,b ,c;
-        float d, r1,r2;
+        int a ,b ,c,real;
+        float d, r1,r2,img;
         System.out.println("Please enter the coefficients of the Quadratic Equation respectively: ");
         a = sc.nextInt();
         b = sc.nextInt();
@@ -22,6 +22,10 @@ public class Quadratic {
         }
         else{
              System.out.println("Roots are Imaginary");
+             real = -b/(2*a);
+             img = (float)Math.sqrt(-d)/(2*a);
+             System.out.println(real+"+"+"i"+img);
+             System.out.println(real+"-"+"i"+img);
          }
         
     }
